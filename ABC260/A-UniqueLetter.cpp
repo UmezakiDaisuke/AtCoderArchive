@@ -24,3 +24,26 @@ int main()
     cout << "-1" << endl;
   }
 }
+
+// 別解
+int main()
+{
+  string s;
+  cin >> s;
+  map<char, int> mp;
+  for (auto &nx : s)
+  {
+    mp[nx]++;
+  }
+
+  // solve
+  for (char i = 'a'; i <= 'z'; i++)
+  {
+    if (mp[i] == 1)
+    {
+      cout << i << "\n";
+      return 0;
+    }
+  }
+  cout << "-1\n";
+}
